@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class MovieList extends Component {
   constructor(props) {
@@ -36,8 +36,8 @@ export default class MovieList extends Component {
 function MovieDetails({ movie }) {
   const { id } = movie;
   return (
-    <NavLink to={`/movies/${id}`} style= {{ textDecoration: 'none', color: '#000000' }}>
+    <Link to={`/movies/${id}`} style={{ textDecoration: 'none', color: '#000000' }}>
      <MovieCard movie={movie} />
-     </NavLink>
+     </Link>
   );
 }
